@@ -10,9 +10,9 @@
      apt: upgrade=dist update_cache=yes
 
    - name: change timezone to london settings
-     command: sudo timedatectl set-timezone Europe/London
+     command: timedatectl set-timezone Europe/London
 
-- hosts: webservers
+- hosts: jwebservers
   become: true
   tasks:
    - name: installing and updating and repos
@@ -48,3 +48,4 @@
       - nfs-kernel-server
       - lvm2
 
+...
