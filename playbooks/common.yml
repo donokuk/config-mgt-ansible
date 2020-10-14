@@ -9,8 +9,8 @@
    - name: upgrade and update repos
      apt: upgrade=dist update_cache=yes
 
-   -name: change timezone to london settings
-    command: sudo timedatectl set-timezone Europe/London
+   - name: change timezone to london settings
+     command: sudo timedatectl set-timezone Europe/London
 
 - hosts: webservers
   become: true
